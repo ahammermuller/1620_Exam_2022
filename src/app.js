@@ -76,3 +76,4 @@ function closeContact(){
 }
 
 clearBtn.addEventListener("click", closeContact)
+
