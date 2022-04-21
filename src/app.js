@@ -56,4 +56,23 @@ const contactsList = [
 const singeContact = document.getElementById ("display_single_contact")
 const allContact = document.getElementById ("display_all_contacts")
 
+function loadAllcontacts(){
+  if (evt.target.localName === "p"){
+    const contactsList = evt.target.parentElement.outerHTML
+    allContact.insertAdjacentHTML('afterbegin', contactsList)
+  }
+}
 
+loadAllcontacts()
+
+function displayContact(evt){
+  contactsList.addEventListener('click', evt => {
+    allContact.innerHTML =''
+  }
+}
+
+function closeContact(){
+  singeContact.innerHTML = ""
+}
+
+clearBtn.addEventListener("click", closeContact)
