@@ -52,3 +52,8 @@ const contactsList = [
 ]
 
 // Your code goes here
+
+const singeContact = document.getElementById ("display_single_contact")
+const allContact = document.getElementById ("display_all_contacts")
+
+
