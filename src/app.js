@@ -53,27 +53,22 @@ const contactsList = [
 
 // Your code goes here
 
-const singeContact = document.getElementById ("display_single_contact")
-const allContact = document.getElementById ("display_all_contacts")
+function contactCardtemplate(contactObj){
+  const cardTemplate = `
+  <div class="contact_card"id="${contactObj.ID}">
+    <img src="img/${contactObj.image}"alt="${contactObj.name}'s photo">
+    <p>${contactObj.name}</p>
+  </div>
+  `
+  return cardTemplate
+}
 
-function loadAllcontacts(){
-  if (evt.target.localName === "p"){
-    const contactsList = evt.target.parentElement.outerHTML
-    allContact.insertAdjacentHTML('afterbegin', contactsList)
+function createContactcards(contactsArray) {
+  const contactCardssection = document.querySelector("#display_all_contacts")
+  for(const contact of contactsArray){
+    const newCard = contactCardtemplate(contact)
+    contactCardssection.insertAdjacentHTML('afterbegin', newCard )
   }
 }
 
-loadAllcontacts()
-
-function displayContact(evt){
-  contactsList.addEventListener('click', evt => {
-    allContact.innerHTML =''
-  }
-}
-
-function closeContact(){
-  singeContact.innerHTML = ""
-}
-
-clearBtn.addEventListener("click", closeContact)
-
+createContactcards(contactsList)

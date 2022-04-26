@@ -43,9 +43,6 @@ header p {
   font-weight: 500;
   font-size: 3rem;
   color: var(--grey);
-  display: flex;
-  justify-content: end;
-  align-items: center;
 }
 
 header ul {
@@ -134,7 +131,6 @@ footer {
   height: 5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 footer p {
@@ -142,4 +138,9 @@ footer p {
   font-size: 1.6rem;
   color: var(--grey);
   align-self: center;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
 }
