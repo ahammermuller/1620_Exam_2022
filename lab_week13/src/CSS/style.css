@@ -1,0 +1,58 @@
+#root, #_ _next {
+    isolation: isolate;
+}
+
+:root {
+    --main-bg-color: floralwhite ;
+    --main-text-color: darkblue;
+    --main_light_green: honeydew;
+    --main_green: darkgreen;
+}
+
+body {
+    background-color: var(--main-bg-color)
+}
+
+p {
+    color: var(--main-text-color);
+    font-family: 'Times New Roman', Times, serif
+}
+
+h1{
+    color: var(--main-text-color);
+    text-align: center;
+    padding-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color: var(--main_green);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.originals, .copies{
+    padding-left: 20px;
+}
+
+.original-container{
+    font-size: 1.2rem;
+}
+
+button{
+    background-color: var(--main_light_green);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+.copy-container{
+    font-size: 1.1rem;
+    color: var(--main-text-color);
+    padding: 10px;
+}
+
+.inner {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+  }
